@@ -94,4 +94,9 @@ for i in range(5):
 print("Jogos em destaque, com base em valor, desconto, recomendação e top vendas")
 print(destaque)
 
+with open('resultado.txt', 'w') as result:
+    result.write("Jogos em destaque, com base em valor, desconto, recomendação e top vendas")
+    for i in range(len(destaque)):
+        result.write(destaque[i] + "\n")
+
 driver.close()
